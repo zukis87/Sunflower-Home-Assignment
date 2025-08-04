@@ -1,0 +1,74 @@
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.score {
+  display: flex;
+  width: 100%;
+  font-weight: bold;
+  color: white;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.rows-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: darkgreen;
+  border: 0.25rem solid darkgreen;
+  border-radius: 0.5rem;
+  background-clip: border-box;
+  outline: 0.4rem solid lightgreen;
+
+}
+
+.row {
+  display: flex;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 2rem;
+  background: darkslateblue;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+.cash-out-text {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: gold;
+  text-shadow: 0 0 5px black;
+  animation: popUp 1.2s ease-out forwards;
+  pointer-events: none;
+  z-index: 10;
+}
